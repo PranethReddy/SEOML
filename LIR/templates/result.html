@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyword Analysis Results</title>
+</head>
+<body>
+    <h1>Keyword Analysis Results</h1>
+    <ul>
+        {% for keyword, score in keywords.items() %}
+        <li>{{ keyword }}: {{ score }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back</a>
+</body>
+</html>

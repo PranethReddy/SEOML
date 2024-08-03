@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SEO Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>SEO Report</h1>
+    <p><strong>Title:</strong> {{ report.title }}</p>
+    <p><strong>Meta Description:</strong> {{ report.meta_description }}</p>
+    <p><strong>Keywords:</strong> {{ report.keywords }}</p>
+    <p><strong>Ranking Percentage:</strong> {{ report.ranking }}%</p>
+    <form action="/optimize" method="post">
+        <input type="hidden" name="file" value="{{ url }}">
+        <button type="submit">Optimize</button>
+    </form>
+</body>
+</html>
